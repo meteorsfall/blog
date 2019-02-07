@@ -1,0 +1,27 @@
+.header {
+  height:100px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-title {
+  float: right;
+}
+
+.header-right {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+h2 {
+  margin: 0;
+}
+
+#header-logo {
+  height:100px;
+}
