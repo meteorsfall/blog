@@ -1,9 +1,9 @@
 <?php
 function connect() {
   $servername = "localhost";
+  $database = "blog";
   $username = "php";
   $password = "HsR0xf1eLJLqDC1YpJ8w";
-  $database = "blog";
 
   $conn = new mysqli($servername, $username, $password, $database);
 

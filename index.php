@@ -34,7 +34,7 @@ $conn = connect();
             if (!$result) {
               die(mysqli_error($conn));
             }
-            $row = $result->fetch_assoc();
+            while($row = $result->fetch_assoc()){
           ?>
           <article class="article">
             <div class="article-header">
@@ -52,9 +52,12 @@ $conn = connect();
               </div>
             </div>
             <div class="article-text" id="article-text">
-	      <?php echo $row["content"]; ?> 
-	    </div>
+	            <?php echo $row["content"]; ?> 
+	          </div>
           </article>
+          <?php
+            }
+          ?>
         </section>
         <aside class="info">
           <button type="button" name="subscribe">Subscribe</button>
