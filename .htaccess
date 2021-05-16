@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteRule ^$ "/home" [R,L]
+RewriteRule ^\w*$ "$0.php" [END]
+RewriteRule ^css/\w*\.(css)$ "$0" [END]
+RewriteRule ^js/\w*\.(js)$ "$0" [END]
+RewriteRule ^images/\w*\.(png|jpe?g)$ "$0" [END]
+RewriteRule ^api/[\w/]*$ "$0" [L]
+RewriteRule ^.*$ - [L,R=404]
+
